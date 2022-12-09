@@ -32,7 +32,7 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 # Build settings
-outer-theme: artemsheludko/flexible-jekyll
+remote-theme: artemsheludko/flexible-jekyll
 plugins:
   - jekyll-feed
 
