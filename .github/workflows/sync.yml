@@ -16,12 +16,13 @@ jobs:
 
       - name: Clone source repo
         run: |
-          git clone https://x-access-token:${{ secrets.SOURCE_REPO_TOKEN }}@github.com/ricardosouzag/gradeanalysis.git source
+          git clone https://x-access-token:${{ secrets.SOURCE_REPO_TOKEN }}@github.com/ricardosouzag/gradeanalysis.git temp_source
 
       - name: Copy HTML files
         run: |
           mkdir -p relatorios
-          rsync -av --delete "source/2026/relatorios-simples/" relatorios/
+          rsync -av --delete "temp_source/2026/relatorios-simples/" relatorios/
+          rm -rf temp_source
 
       - name: Commit and push if changed
         run: |
