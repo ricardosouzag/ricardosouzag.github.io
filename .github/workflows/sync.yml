@@ -16,7 +16,7 @@ jobs:
 
       - name: Clone source repo
         run: |
-          git clone https://github.com/ricardosouzag/gradeanalysis.git source
+          git clone https://x-access-token:${{ secrets.SOURCE_REPO_TOKEN }}@github.com/ricardosouzag/gradeanalysis.git source
 
       - name: Copy HTML files
         run: |
