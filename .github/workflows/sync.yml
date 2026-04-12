@@ -25,90 +25,111 @@ jobs:
           rm -rf temp_source
 
       - name: Generate per-school indexes
-        shell: bash
         run: |
-          shopt -s nullglob
+          python <<'PYTHON'
+          from pathlib import Path
+          from datetime import datetime
 
-          for school_dir in relatorios/*/; do
-            school=$(basename "$school_dir")
-            school_display="${school//-/ }"
-            school_display="${school_display//_/ }"
+          relatorios = Path("relatorios")
 
-            cat > "$school_dir/index.html" <<EOF
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Relatórios - $school_display</title>
-  <style>
-    body {
-      font-family: system-ui, sans-serif;
-      background: #f5f7fa;
-      padding: 2rem;
-      color: #222;
-    }
+          TEMPLATE = """
+          <!DOCTYPE html>
+          <html lang="pt-BR">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Relatórios - {school}</title>
+            <style>
+              body {{
+                font-family: system-ui, sans-serif;
+                background: #f5f7fa;
+                padding: 2rem;
+                color: #222;
+              }}
 
-    .container {
-      max-width: 900px;
-      margin: auto;
-      background: white;
-      padding: 2rem;
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-    }
+              .container {{
+                max-width: 900px;
+                margin: auto;
+                background: white;
+                padding: 2rem;
+                border-radius: 16px;
+                box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+              }}
 
-    ul {
-      list-style: none;
-      padding: 0;
-    }
+              ul {{
+                list-style: none;
+                padding: 0;
+              }}
 
-    li {
-      margin-bottom: 0.75rem;
-    }
+              li {{
+                margin-bottom: 0.75rem;
+              }}
 
-    a {
-      display: block;
-      padding: 1rem;
-      text-decoration: none;
-      background: #f8fafc;
-      border-radius: 10px;
-      border: 1px solid #e2e8f0;
-      color: #0f172a;
-    }
+              a {{
+                display: block;
+                padding: 1rem;
+                text-decoration: none;
+                background: #f8fafc;
+                border-radius: 10px;
+                border: 1px solid #e2e8f0;
+                color: #0f172a;
+              }}
 
-    a:hover {
-      background: #e2e8f0;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Relatórios — $school_display</h1>
-    <ul>
-EOF
+              a:hover {{
+                background: #e2e8f0;
+              }}
 
-            for file in "$school_dir"/*.html; do
-              fname=$(basename "$file")
+              .footer {{
+                margin-top: 2rem;
+                font-size: 0.9rem;
+                color: #777;
+              }}
+            </style>
+          </head>
+          <body>
+            <div class="container">
+              <h1>Relatórios — {school}</h1>
+              <ul>
+                {links}
+              </ul>
+              <div class="footer">
+                Última atualização: {timestamp}
+              </div>
+            </div>
+          </body>
+          </html>
+          """
 
-              if [ "$fname" != "index.html" ]; then
-                display_name="${fname%.html}"
-                display_name="${display_name//_/ }"
+          timestamp = datetime.now().strftime("%d/%m/%Y às %H:%M")
 
-                echo "<li><a href=\"$fname\">$display_name</a></li>" >> "$school_dir/index.html"
-              fi
-            done
+          for school_dir in relatorios.iterdir():
+              if not school_dir.is_dir():
+                  continue
 
-            cat >> "$school_dir/index.html" <<EOF
-    </ul>
-  </div>
-</body>
-</html>
-EOF
+              school_display = school_dir.name.replace("-", " ").replace("_", " ")
 
-          done
+              links = []
+              for html_file in sorted(school_dir.glob("*.html")):
+                  if html_file.name == "index.html":
+                      continue
 
-          rm -f relatorios/index.html
+                  display_name = html_file.stem.replace("_", " ")
+                  links.append(
+                      f'<li><a href="{html_file.name}">{display_name}</a></li>'
+                  )
+
+              index_html = TEMPLATE.format(
+                  school=school_display,
+                  links="\n      ".join(links),
+                  timestamp=timestamp,
+              )
+
+              (school_dir / "index.html").write_text(index_html, encoding="utf-8")
+
+          root_index = relatorios / "index.html"
+          if root_index.exists():
+              root_index.unlink()
+          PYTHON
 
       - name: Commit and push if changed
         run: |
