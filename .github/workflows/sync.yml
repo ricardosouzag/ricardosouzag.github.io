@@ -4,7 +4,7 @@ on:
   push:
   workflow_dispatch:
   schedule:
-    - cron: "0 * * * *"  # every hour (optional)
+    - cron: "0 * * * *"
 
 jobs:
   sync:
@@ -21,7 +21,7 @@ jobs:
       - name: Copy HTML files
         run: |
           mkdir -p relatorios
-          rsync -av --delete "temp_source/2026/relatorios-simples/" relatorios/
+          rsync -av --delete "temp_source/2026/relatorios-simples/" "relatorios/"
           rm -rf temp_source
 
       - name: Generate styled index for reports
@@ -56,6 +56,13 @@ jobs:
                 font-size: 2rem;
                 border-bottom: 2px solid #eee;
                 padding-bottom: 0.5rem;
+              }
+
+              h2 {
+                margin-top: 2rem;
+                margin-bottom: 1rem;
+                font-size: 1.3rem;
+                color: #334155;
               }
 
               .subtitle {
@@ -102,20 +109,31 @@ jobs:
               <div class="subtitle">
                 Lista atualizada automaticamente dos relatórios publicados.
               </div>
-              <ul>
           EOF
 
-          for file in relatorios/*.html; do
-            fname=$(basename "$file")
-            if [ "$fname" != "index.html" ]; then
+          shopt -s nullglob
+
+          for school_dir in relatorios/*/; do
+            school=$(basename "$school_dir")
+            school_display="${school//-/ }"
+            school_display="${school_display//_/ }"
+
+            echo "<h2>$school_display</h2>" >> relatorios/index.html
+            echo "<ul>" >> relatorios/index.html
+
+            for file in "$school_dir"/*.html; do
+              fname=$(basename "$file")
+
               display_name="${fname%.html}"
               display_name="${display_name//_/ }"
-              echo "<li><a href=\"$fname\">$display_name</a></li>" >> relatorios/index.html
-            fi
+
+              echo "<li><a href=\"$school/$fname\">$display_name</a></li>" >> relatorios/index.html
+            done
+
+            echo "</ul>" >> relatorios/index.html
           done
 
           cat >> relatorios/index.html <<EOF
-              </ul>
               <div class="footer">
                 Última atualização: $(date '+%d/%m/%Y às %H:%M')
               </div>
