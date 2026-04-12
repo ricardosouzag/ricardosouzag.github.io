@@ -24,93 +24,9 @@ jobs:
           rsync -av --delete "temp_source/2026/relatorios-simples/" "relatorios/"
           rm -rf temp_source
 
-      - name: Generate styled index for reports
+      - name: Generate per-school indexes
+        shell: bash
         run: |
-          cat > relatorios/index.html <<'EOF'
-          <!DOCTYPE html>
-          <html lang="pt-BR">
-          <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Relatórios</title>
-            <style>
-              body {
-                font-family: system-ui, sans-serif;
-                background: #f5f7fa;
-                margin: 0;
-                padding: 2rem;
-                color: #222;
-              }
-
-              .container {
-                max-width: 900px;
-                margin: auto;
-                background: white;
-                padding: 2rem;
-                border-radius: 16px;
-                box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-              }
-
-              h1 {
-                margin-top: 0;
-                font-size: 2rem;
-                border-bottom: 2px solid #eee;
-                padding-bottom: 0.5rem;
-              }
-
-              h2 {
-                margin-top: 2rem;
-                margin-bottom: 1rem;
-                font-size: 1.3rem;
-                color: #334155;
-              }
-
-              .subtitle {
-                color: #666;
-                margin-bottom: 2rem;
-              }
-
-              ul {
-                list-style: none;
-                padding: 0;
-                margin: 0;
-              }
-
-              li {
-                margin-bottom: 0.75rem;
-              }
-
-              a {
-                display: block;
-                text-decoration: none;
-                padding: 1rem 1.25rem;
-                background: #f8fafc;
-                border-radius: 10px;
-                color: #0f172a;
-                transition: all 0.15s ease;
-                border: 1px solid #e2e8f0;
-              }
-
-              a:hover {
-                background: #e2e8f0;
-                transform: translateY(-1px);
-              }
-
-              .footer {
-                margin-top: 2rem;
-                font-size: 0.9rem;
-                color: #777;
-              }
-            </style>
-          </head>
-          <body>
-            <div class="container">
-              <h1>Relatórios Disponíveis</h1>
-              <div class="subtitle">
-                Lista atualizada automaticamente dos relatórios publicados.
-              </div>
-          EOF
-
           shopt -s nullglob
 
           for school_dir in relatorios/*/; do
@@ -118,29 +34,81 @@ jobs:
             school_display="${school//-/ }"
             school_display="${school_display//_/ }"
 
-            echo "<h2>$school_display</h2>" >> relatorios/index.html
-            echo "<ul>" >> relatorios/index.html
+            cat > "$school_dir/index.html" <<EOF
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relatórios - $school_display</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: #f5f7fa;
+      padding: 2rem;
+      color: #222;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 0.75rem;
+    }
+
+    a {
+      display: block;
+      padding: 1rem;
+      text-decoration: none;
+      background: #f8fafc;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+      color: #0f172a;
+    }
+
+    a:hover {
+      background: #e2e8f0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Relatórios — $school_display</h1>
+    <ul>
+EOF
 
             for file in "$school_dir"/*.html; do
               fname=$(basename "$file")
 
-              display_name="${fname%.html}"
-              display_name="${display_name//_/ }"
+              if [ "$fname" != "index.html" ]; then
+                display_name="${fname%.html}"
+                display_name="${display_name//_/ }"
 
-              echo "<li><a href=\"$school/$fname\">$display_name</a></li>" >> relatorios/index.html
+                echo "<li><a href=\"$fname\">$display_name</a></li>" >> "$school_dir/index.html"
+              fi
             done
 
-            echo "</ul>" >> relatorios/index.html
+            cat >> "$school_dir/index.html" <<EOF
+    </ul>
+  </div>
+</body>
+</html>
+EOF
+
           done
 
-          cat >> relatorios/index.html <<EOF
-              <div class="footer">
-                Última atualização: $(date '+%d/%m/%Y às %H:%M')
-              </div>
-            </div>
-          </body>
-          </html>
-          EOF
+          rm -f relatorios/index.html
 
       - name: Commit and push if changed
         run: |
