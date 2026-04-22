@@ -2,28 +2,83 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <title>Relatorio Simples - 1ª Prova Mista Mat (Etapa 1)</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relatorio_Simples_Etapa_1_1ª_Prova_Mista_Mat</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 24px; color: #1f2937; }
-    h1, h2 { margin-bottom: 8px; }
-    p { margin-top: 0; }
-    .card { border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; margin-bottom: 18px; }
-    table { border-collapse: collapse; width: 100%; font-size: 14px; }
-    th, td { border: 1px solid #e5e7eb; padding: 8px; text-align: left; }
-    th { background: #f9fafb; }
+    body {
+      font-family: system-ui, sans-serif;
+      background: #f5f7fa;
+      padding: 2rem;
+      color: #222;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+
+    details {
+      margin-bottom: 1rem;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    summary {
+      cursor: pointer;
+      padding: 1rem;
+      font-size: 1.2rem;
+      background: #f1f5f9;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    details[open] summary {
+      background: #e2e8f0;
+    }
+
+    details > *:not(summary) {
+      padding: 1rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid #e5e7eb;
+      padding: 0.5rem;
+      text-align: left;
+    }
+
+    th {
+      background: #f8fafc;
+    }
+
+    .footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
   </style>
 </head>
 <body>
-  <h1>Relatorio Simples - 1ª Prova Mista Mat (Etapa 1)</h1>
-  <p><strong>Data:</strong> 12/04/2026 09:20</p>
+  <div class="container">
+    
+  <details open><summary><h1>Relatorio Simples - 1ª Prova Mista Mat (Etapa 1)</h1></summary>
+  <p><strong>Data:</strong> 15/04/2026 14:53</p>
   <p>Analise da avaliacao '1ª Prova Mista Mat' na 1a etapa.</p>
   <div class="card">
-    <h2>Resumo automatico</h2>
-    <p>A media geral foi 5.53, com mediana 5.70. A taxa de alunos com pelo menos 60% da nota maxima foi de 67.14%.</p>
+    </details><details><summary><h2>Resumo automatico</h2></summary>
+    <p>A media geral foi 5.60, com mediana 5.70. A taxa de alunos com pelo menos 60% da nota maxima foi de 67.96%.</p>
   </div>
   <div class="card">
-    <h2>Tabela 1: Resumo geral</h2>
+    </details><details><summary><h2>Tabela 1: Resumo geral</h2></summary>
     <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -38,19 +93,19 @@
   </thead>
   <tbody>
     <tr>
-      <td>283</td>
-      <td>5.53</td>
+      <td>284</td>
+      <td>5.6</td>
       <td>5.7</td>
-      <td>1.71</td>
+      <td>1.76</td>
       <td>0.7</td>
       <td>8.0</td>
-      <td>67.14</td>
+      <td>67.96</td>
     </tr>
   </tbody>
 </table>
   </div>
   <div class="card">
-    <h2>Tabela 2: Resumo por turma</h2>
+    </details><details><summary><h2>Tabela 2: Resumo por turma</h2></summary>
     <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -66,31 +121,31 @@
     <tr>
       <td>9A</td>
       <td>31</td>
-      <td>4.95</td>
-      <td>5.60</td>
+      <td>5.12</td>
+      <td>5.70</td>
       <td>1.3</td>
       <td>8.0</td>
     </tr>
     <tr>
       <td>9B</td>
-      <td>33</td>
-      <td>5.70</td>
-      <td>6.00</td>
+      <td>34</td>
+      <td>5.82</td>
+      <td>6.10</td>
       <td>1.5</td>
-      <td>7.6</td>
+      <td>8.0</td>
     </tr>
     <tr>
       <td>9C</td>
       <td>37</td>
-      <td>5.63</td>
-      <td>5.90</td>
+      <td>5.76</td>
+      <td>6.00</td>
       <td>1.0</td>
       <td>8.0</td>
     </tr>
     <tr>
       <td>9D</td>
       <td>37</td>
-      <td>6.36</td>
+      <td>6.41</td>
       <td>6.70</td>
       <td>2.5</td>
       <td>8.0</td>
@@ -98,10 +153,10 @@
     <tr>
       <td>9E</td>
       <td>36</td>
-      <td>5.59</td>
+      <td>5.69</td>
       <td>5.80</td>
       <td>2.2</td>
-      <td>7.5</td>
+      <td>8.0</td>
     </tr>
     <tr>
       <td>9F</td>
@@ -131,7 +186,7 @@
 </table>
   </div>
   <div class="card">
-    <h2>Tabela 3: Top 50</h2>
+    </details><details><summary><h2>Tabela 3: Top 29 (10.0%)</h2></summary>
     <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -143,310 +198,184 @@
   </thead>
   <tbody>
     <tr>
+      <td>Luca Lacerda Abreu</td>
+      <td>9H</td>
+      <td>8.0</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
       <td>Lara Caroline Araújo Ramos</td>
       <td>9H</td>
       <td>8.0</td>
-      <td>100.00</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>Camila Pansini Lage</td>
+      <td>9A</td>
+      <td>8.0</td>
+      <td>100.0</td>
     </tr>
     <tr>
       <td>Calebe Roque Silva Maia</td>
       <td>9A</td>
       <td>8.0</td>
-      <td>100.00</td>
-    </tr>
-    <tr>
-      <td>Luca Lacerda Abreu</td>
-      <td>9H</td>
-      <td>8.0</td>
-      <td>100.00</td>
-    </tr>
-    <tr>
-      <td>Rodrigo Assis Souza Pereira</td>
-      <td>9F</td>
-      <td>8.0</td>
-      <td>100.00</td>
-    </tr>
-    <tr>
-      <td>Beatrice Terenzi de Oliveira Santos</td>
-      <td>9C</td>
-      <td>8.0</td>
-      <td>100.00</td>
+      <td>100.0</td>
     </tr>
     <tr>
       <td>Arthur Roberto Assunção Goston</td>
       <td>9G</td>
       <td>8.0</td>
-      <td>100.00</td>
+      <td>100.0</td>
     </tr>
     <tr>
       <td>Beatriz Amormino Arantes Vieira</td>
       <td>9G</td>
       <td>8.0</td>
-      <td>100.00</td>
-    </tr>
-    <tr>
-      <td>Pedro Henrique Ferreira Quirino da Costa</td>
-      <td>9C</td>
-      <td>8.0</td>
-      <td>100.00</td>
-    </tr>
-    <tr>
-      <td>Eduarda Neiva Rodrigues Aguiar Mendes</td>
-      <td>9F</td>
-      <td>8.0</td>
-      <td>100.00</td>
+      <td>100.0</td>
     </tr>
     <tr>
       <td>Ana Carolina de Oliveira Gomes</td>
       <td>9F</td>
       <td>8.0</td>
-      <td>100.00</td>
+      <td>100.0</td>
     </tr>
     <tr>
-      <td>Gustavo Botelho Souza Rezende</td>
-      <td>9A</td>
+      <td>Eduarda Neiva Rodrigues Aguiar Mendes</td>
+      <td>9F</td>
       <td>8.0</td>
-      <td>100.00</td>
+      <td>100.0</td>
     </tr>
     <tr>
-      <td>Daniel Prieto Mendes</td>
-      <td>9D</td>
+      <td>Gabriel Pansini Lage</td>
+      <td>9B</td>
       <td>8.0</td>
-      <td>100.00</td>
+      <td>100.0</td>
     </tr>
     <tr>
-      <td>Davi Mirão Maciel Vieira</td>
-      <td>9D</td>
+      <td>Eduarda Giovanna Freire Martins</td>
+      <td>9B</td>
       <td>8.0</td>
-      <td>100.00</td>
+      <td>100.0</td>
     </tr>
     <tr>
-      <td>Theo Campos Rodrigues Nunes</td>
-      <td>9G</td>
-      <td>8.0</td>
-      <td>100.00</td>
-    </tr>
-    <tr>
-      <td>Samuel Lacerda Rodrigues dos Santos</td>
-      <td>9D</td>
-      <td>8.0</td>
-      <td>100.00</td>
-    </tr>
-    <tr>
-      <td>Túlio Oliveira Roberto Lourenço</td>
-      <td>9D</td>
-      <td>8.0</td>
-      <td>100.00</td>
-    </tr>
-    <tr>
-      <td>Lucas Prieto Mendes</td>
-      <td>9D</td>
-      <td>8.0</td>
-      <td>100.00</td>
-    </tr>
-    <tr>
-      <td>Julia Almeida Campera</td>
+      <td>Beatrice Terenzi de Oliveira Santos</td>
       <td>9C</td>
       <td>8.0</td>
-      <td>100.00</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>Rodrigo Assis Souza Pereira</td>
+      <td>9F</td>
+      <td>8.0</td>
+      <td>100.0</td>
     </tr>
     <tr>
       <td>Manuella Mariano Ferreira</td>
       <td>9C</td>
       <td>8.0</td>
-      <td>100.00</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>Theo Campos Rodrigues Nunes</td>
+      <td>9G</td>
+      <td>8.0</td>
+      <td>100.0</td>
     </tr>
     <tr>
       <td>Vinícius de Almeida Pontel</td>
       <td>9A</td>
       <td>8.0</td>
-      <td>100.00</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>Cristiano José de Abreu Rezende</td>
+      <td>9B</td>
+      <td>8.0</td>
+      <td>100.0</td>
     </tr>
     <tr>
       <td>Isaac Coimbra Vidal</td>
       <td>9A</td>
-      <td>7.9</td>
-      <td>98.75</td>
+      <td>8.0</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>Gustavo Botelho Souza Rezende</td>
+      <td>9A</td>
+      <td>8.0</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>Joao Vitor de Andrade Soares</td>
+      <td>9E</td>
+      <td>8.0</td>
+      <td>100.0</td>
     </tr>
     <tr>
       <td>Lucas Oliveira Carneiro</td>
       <td>9D</td>
-      <td>7.9</td>
-      <td>98.75</td>
-    </tr>
-    <tr>
-      <td>João Lucas Passos Viana</td>
-      <td>9C</td>
-      <td>7.9</td>
-      <td>98.75</td>
-    </tr>
-    <tr>
-      <td>Pedro Pires Ferreira</td>
-      <td>9C</td>
-      <td>7.9</td>
-      <td>98.75</td>
+      <td>8.0</td>
+      <td>100.0</td>
     </tr>
     <tr>
       <td>Nicolas Cançado Loureiro</td>
       <td>9D</td>
-      <td>7.8</td>
-      <td>97.50</td>
+      <td>8.0</td>
+      <td>100.0</td>
     </tr>
     <tr>
-      <td>Sophia Campos Pacheco</td>
-      <td>9H</td>
-      <td>7.7</td>
-      <td>96.25</td>
-    </tr>
-    <tr>
-      <td>Clarissa Colenghi Baptista</td>
+      <td>Lucas Prieto Mendes</td>
       <td>9D</td>
-      <td>7.7</td>
-      <td>96.25</td>
+      <td>8.0</td>
+      <td>100.0</td>
     </tr>
     <tr>
-      <td>Miguel Dias Almeida</td>
-      <td>9C</td>
-      <td>7.7</td>
-      <td>96.25</td>
-    </tr>
-    <tr>
-      <td>Bernardo Gonçalves Freitas</td>
-      <td>9B</td>
-      <td>7.6</td>
-      <td>95.00</td>
-    </tr>
-    <tr>
-      <td>Giovana Aguilar Costa</td>
+      <td>Túlio Oliveira Roberto Lourenço</td>
       <td>9D</td>
-      <td>7.6</td>
-      <td>95.00</td>
+      <td>8.0</td>
+      <td>100.0</td>
     </tr>
     <tr>
-      <td>Maria Luiza Almeida Aires</td>
-      <td>9B</td>
-      <td>7.5</td>
-      <td>93.75</td>
+      <td>Samuel Lacerda Rodrigues dos Santos</td>
+      <td>9D</td>
+      <td>8.0</td>
+      <td>100.0</td>
     </tr>
     <tr>
-      <td>Isadora Antunes Ribeiro</td>
+      <td>Davi Cassetti Franklin Amorim</td>
       <td>9E</td>
-      <td>7.5</td>
-      <td>93.75</td>
+      <td>8.0</td>
+      <td>100.0</td>
     </tr>
     <tr>
-      <td>Guilherme Bastos Vieira</td>
-      <td>9A</td>
-      <td>7.5</td>
-      <td>93.75</td>
-    </tr>
-    <tr>
-      <td>Daniel Santos Vieira</td>
-      <td>9H</td>
-      <td>7.5</td>
-      <td>93.75</td>
-    </tr>
-    <tr>
-      <td>Alice Pimenta Lage Vieira</td>
-      <td>9D</td>
-      <td>7.5</td>
-      <td>93.75</td>
-    </tr>
-    <tr>
-      <td>Felipe de Freitas Picinin</td>
-      <td>9F</td>
-      <td>7.5</td>
-      <td>93.75</td>
-    </tr>
-    <tr>
-      <td>Ana Luiza Fagundes Martins da Silva</td>
-      <td>9G</td>
-      <td>7.5</td>
-      <td>93.75</td>
-    </tr>
-    <tr>
-      <td>Sarah Clark Alvarenga Corrêa</td>
-      <td>9C</td>
-      <td>7.5</td>
-      <td>93.75</td>
-    </tr>
-    <tr>
-      <td>Pedro Eduardo Bellezza Martins da Silva</td>
-      <td>9D</td>
-      <td>7.4</td>
-      <td>92.50</td>
-    </tr>
-    <tr>
-      <td>João Victor Muller Bicalho</td>
-      <td>9B</td>
-      <td>7.4</td>
-      <td>92.50</td>
-    </tr>
-    <tr>
-      <td>Juliana Xavier dos Santos</td>
-      <td>9D</td>
-      <td>7.4</td>
-      <td>92.50</td>
-    </tr>
-    <tr>
-      <td>Clara Bretz Mendes</td>
-      <td>9B</td>
-      <td>7.4</td>
-      <td>92.50</td>
-    </tr>
-    <tr>
-      <td>Gabriela Dodd Garcia</td>
-      <td>9H</td>
-      <td>7.4</td>
-      <td>92.50</td>
-    </tr>
-    <tr>
-      <td>Alice Marques Oliveira</td>
-      <td>9B</td>
-      <td>7.3</td>
-      <td>91.25</td>
-    </tr>
-    <tr>
-      <td>Lucas Alves Saldanha</td>
-      <td>9G</td>
-      <td>7.3</td>
-      <td>91.25</td>
-    </tr>
-    <tr>
-      <td>Felipe Simões Fonseca</td>
-      <td>9C</td>
-      <td>7.3</td>
-      <td>91.25</td>
-    </tr>
-    <tr>
-      <td>Felipe Assis Souza Pereira</td>
-      <td>9F</td>
-      <td>7.3</td>
-      <td>91.25</td>
-    </tr>
-    <tr>
-      <td>Bruna Helena Barbosa Alves</td>
-      <td>9F</td>
-      <td>7.3</td>
-      <td>91.25</td>
-    </tr>
-    <tr>
-      <td>Arthur Braga Proence</td>
+      <td>Gabriel Alkmim Resende Temponi Garzedin</td>
       <td>9E</td>
-      <td>7.3</td>
-      <td>91.25</td>
+      <td>8.0</td>
+      <td>100.0</td>
     </tr>
     <tr>
-      <td>Mariana Ambrósio Silva</td>
+      <td>Lucas de Lima Paiva</td>
+      <td>9E</td>
+      <td>8.0</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>Davi Mirão Maciel Vieira</td>
       <td>9D</td>
-      <td>7.3</td>
-      <td>91.25</td>
+      <td>8.0</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>Daniel Prieto Mendes</td>
+      <td>9D</td>
+      <td>8.0</td>
+      <td>100.0</td>
     </tr>
   </tbody>
 </table>
   </div>
   <div class="card">
-    <h2>Tabela 4: Menores 50</h2>
+    </details><details><summary><h2>Tabela 4: Menores 29 (10.0%)</h2></summary>
     <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -488,12 +417,6 @@
       <td>17.50</td>
     </tr>
     <tr>
-      <td>Ester Aquino Lacerda</td>
-      <td>9G</td>
-      <td>1.5</td>
-      <td>18.75</td>
-    </tr>
-    <tr>
       <td>Anna Júlia Melo Buchholz</td>
       <td>9B</td>
       <td>1.5</td>
@@ -502,6 +425,12 @@
     <tr>
       <td>Júlia Sabino Braz</td>
       <td>9A</td>
+      <td>1.5</td>
+      <td>18.75</td>
+    </tr>
+    <tr>
+      <td>Ester Aquino Lacerda</td>
+      <td>9G</td>
       <td>1.5</td>
       <td>18.75</td>
     </tr>
@@ -542,14 +471,14 @@
       <td>28.75</td>
     </tr>
     <tr>
-      <td>Felipe Marçano Santos</td>
-      <td>9E</td>
+      <td>Davi Torres Martins de Almeida</td>
+      <td>9B</td>
       <td>2.3</td>
       <td>28.75</td>
     </tr>
     <tr>
-      <td>Davi Torres Martins de Almeida</td>
-      <td>9B</td>
+      <td>Felipe Marçano Santos</td>
+      <td>9E</td>
       <td>2.3</td>
       <td>28.75</td>
     </tr>
@@ -566,8 +495,8 @@
       <td>32.50</td>
     </tr>
     <tr>
-      <td>Gustavo Soares Chamilet</td>
-      <td>9G</td>
+      <td>Débora Sahid Chequer de Morais</td>
+      <td>9A</td>
       <td>2.7</td>
       <td>33.75</td>
     </tr>
@@ -578,8 +507,8 @@
       <td>33.75</td>
     </tr>
     <tr>
-      <td>Débora Sahid Chequer de Morais</td>
-      <td>9A</td>
+      <td>Gustavo Soares Chamilet</td>
+      <td>9G</td>
       <td>2.7</td>
       <td>33.75</td>
     </tr>
@@ -608,14 +537,14 @@
       <td>37.50</td>
     </tr>
     <tr>
-      <td>Clara Ferreira Bistene Cordeiro</td>
-      <td>9D</td>
+      <td>Carolline Rodrigues Motta de Almeida</td>
+      <td>9A</td>
       <td>3.2</td>
       <td>40.00</td>
     </tr>
     <tr>
-      <td>Carolline Rodrigues Motta de Almeida</td>
-      <td>9A</td>
+      <td>Clara Ferreira Bistene Cordeiro</td>
+      <td>9D</td>
       <td>3.2</td>
       <td>40.00</td>
     </tr>
@@ -626,152 +555,31 @@
       <td>41.25</td>
     </tr>
     <tr>
-      <td>Biannca Duarte Dias de Freitas</td>
-      <td>9C</td>
-      <td>3.4</td>
-      <td>42.50</td>
-    </tr>
-    <tr>
       <td>Luiz Henrique Fonseca Gonçalves</td>
       <td>9H</td>
       <td>3.4</td>
       <td>42.50</td>
     </tr>
-    <tr>
-      <td>Letícia Moraes de Lima</td>
-      <td>9E</td>
-      <td>3.5</td>
-      <td>43.75</td>
-    </tr>
-    <tr>
-      <td>Camila Fonseca de Souza</td>
-      <td>9H</td>
-      <td>3.5</td>
-      <td>43.75</td>
-    </tr>
-    <tr>
-      <td>Manuela Teixeira Carneiro</td>
-      <td>9F</td>
-      <td>3.5</td>
-      <td>43.75</td>
-    </tr>
-    <tr>
-      <td>Yanni Souza Freitas Sant` Ana</td>
-      <td>9E</td>
-      <td>3.5</td>
-      <td>43.75</td>
-    </tr>
-    <tr>
-      <td>Pietro Almeida Alarcão</td>
-      <td>9A</td>
-      <td>3.6</td>
-      <td>45.00</td>
-    </tr>
-    <tr>
-      <td>Isadora Lage Resende</td>
-      <td>9G</td>
-      <td>3.6</td>
-      <td>45.00</td>
-    </tr>
-    <tr>
-      <td>Maria Clara de Araújo Chaves Bittencourt</td>
-      <td>9G</td>
-      <td>3.7</td>
-      <td>46.25</td>
-    </tr>
-    <tr>
-      <td>Maria Eduarda de Matos Gomide Leite</td>
-      <td>9E</td>
-      <td>3.7</td>
-      <td>46.25</td>
-    </tr>
-    <tr>
-      <td>Bernardo Soares Ferreira</td>
-      <td>9G</td>
-      <td>3.7</td>
-      <td>46.25</td>
-    </tr>
-    <tr>
-      <td>Marcela Martins Antunes Gonzaga</td>
-      <td>9E</td>
-      <td>3.8</td>
-      <td>47.50</td>
-    </tr>
-    <tr>
-      <td>Rebeka Carazzoli Cardoso Ferreira</td>
-      <td>9C</td>
-      <td>3.8</td>
-      <td>47.50</td>
-    </tr>
-    <tr>
-      <td>Lucas de Oliveira Pedra</td>
-      <td>9F</td>
-      <td>3.8</td>
-      <td>47.50</td>
-    </tr>
-    <tr>
-      <td>Júlia Oliveira Arêdes Soares</td>
-      <td>9C</td>
-      <td>3.8</td>
-      <td>47.50</td>
-    </tr>
-    <tr>
-      <td>Carlos Miguel Gonçalves Silva</td>
-      <td>9H</td>
-      <td>3.8</td>
-      <td>47.50</td>
-    </tr>
-    <tr>
-      <td>Davi Drummond de Freitas</td>
-      <td>9A</td>
-      <td>3.9</td>
-      <td>48.75</td>
-    </tr>
-    <tr>
-      <td>Talita Santiago de Paula</td>
-      <td>9G</td>
-      <td>3.9</td>
-      <td>48.75</td>
-    </tr>
-    <tr>
-      <td>Davi Oliveira Viana</td>
-      <td>9F</td>
-      <td>3.9</td>
-      <td>48.75</td>
-    </tr>
-    <tr>
-      <td>Samira Lírio Saliba</td>
-      <td>9H</td>
-      <td>3.9</td>
-      <td>48.75</td>
-    </tr>
-    <tr>
-      <td>Cibele Cristiele Silva Costa</td>
-      <td>9A</td>
-      <td>3.9</td>
-      <td>48.75</td>
-    </tr>
-    <tr>
-      <td>Camila Pansini Lage</td>
-      <td>9A</td>
-      <td>4.0</td>
-      <td>50.00</td>
-    </tr>
   </tbody>
 </table>
   </div>
   <div class="card">
-    <h2>Grafico 1: Histograma</h2>
+    </details><details><summary><h2>Grafico 1: Histograma</h2></summary>
     <div>                        <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
-        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.4.0.min.js" integrity="sha256-KEmPoupLpFyGMyGAiOsiNDbKDKAvxXAn/W+oQa0ZAfk=" crossorigin="anonymous"></script>                <div id="5f919bf6-18d4-469a-9014-ed7065ce4555" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("5f919bf6-18d4-469a-9014-ed7065ce4555")) {                    Plotly.newPlot(                        "5f919bf6-18d4-469a-9014-ed7065ce4555",                        [{"marker":{"color":"#3B82F6"},"name":"Notas","nbinsx":10,"opacity":0.75,"x":{"dtype":"f8","bdata":"AAAAAAAAIEAAAAAAAAAgQAAAAAAAACBAAAAAAAAAIEAAAAAAAAAgQAAAAAAAACBAAAAAAAAAIEAAAAAAAAAgQAAAAAAAACBAAAAAAAAAIEAAAAAAAAAgQAAAAAAAACBAAAAAAAAAIEAAAAAAAAAgQAAAAAAAACBAAAAAAAAAIEAAAAAAAAAgQAAAAAAAACBAAAAAAAAAIEAAAAAAAAAgQJqZmZmZmR9AmpmZmZmZH0CamZmZmZkfQJqZmZmZmR9AMzMzMzMzH0DNzMzMzMweQM3MzMzMzB5AzczMzMzMHkBmZmZmZmYeQGZmZmZmZh5AAAAAAAAAHkAAAAAAAAAeQAAAAAAAAB5AAAAAAAAAHkAAAAAAAAAeQAAAAAAAAB5AAAAAAAAAHkAAAAAAAAAeQJqZmZmZmR1AmpmZmZmZHUCamZmZmZkdQJqZmZmZmR1AmpmZmZmZHUAzMzMzMzMdQDMzMzMzMx1AMzMzMzMzHUAzMzMzMzMdQDMzMzMzMx1AMzMzMzMzHUAzMzMzMzMdQM3MzMzMzBxAzczMzMzMHEDNzMzMzMwcQM3MzMzMzBxAzczMzMzMHEDNzMzMzMwcQGZmZmZmZhxAZmZmZmZmHEBmZmZmZmYcQGZmZmZmZhxAZmZmZmZmHEBmZmZmZmYcQGZmZmZmZhxAZmZmZmZmHEBmZmZmZmYcQGZmZmZmZhxAAAAAAAAAHEAAAAAAAAAcQAAAAAAAABxAAAAAAAAAHEAAAAAAAAAcQAAAAAAAABxAAAAAAAAAHECamZmZmZkbQJqZmZmZmRtAmpmZmZmZG0AzMzMzMzMbQDMzMzMzMxtAMzMzMzMzG0AzMzMzMzMbQDMzMzMzMxtAMzMzMzMzG0DNzMzMzMwaQM3MzMzMzBpAzczMzMzMGkDNzMzMzMwaQM3MzMzMzBpAzczMzMzMGkDNzMzMzMwaQM3MzMzMzBpAzczMzMzMGkDNzMzMzMwaQM3MzMzMzBpAzczMzMzMGkBmZmZmZmYaQGZmZmZmZhpAZmZmZmZmGkBmZmZmZmYaQGZmZmZmZhpAZmZmZmZmGkBmZmZmZmYaQJqZmZmZmRlAmpmZmZmZGUCamZmZmZkZQJqZmZmZmRlAMzMzMzMzGUAzMzMzMzMZQM3MzMzMzBhAzczMzMzMGEDNzMzMzMwYQM3MzMzMzBhAzczMzMzMGEDNzMzMzMwYQM3MzMzMzBhAzczMzMzMGEBmZmZmZmYYQGZmZmZmZhhAZmZmZmZmGEBmZmZmZmYYQGZmZmZmZhhAAAAAAAAAGEAAAAAAAAAYQAAAAAAAABhAAAAAAAAAGEAAAAAAAAAYQAAAAAAAABhAAAAAAAAAGEAAAAAAAAAYQJqZmZmZmRdAmpmZmZmZF0CamZmZmZkXQJqZmZmZmRdAmpmZmZmZF0CamZmZmZkXQDMzMzMzMxdAMzMzMzMzF0AzMzMzMzMXQM3MzMzMzBZAzczMzMzMFkDNzMzMzMwWQM3MzMzMzBZAzczMzMzMFkDNzMzMzMwWQM3MzMzMzBZAzczMzMzMFkBmZmZmZmYWQGZmZmZmZhZAZmZmZmZmFkBmZmZmZmYWQGZmZmZmZhZAZmZmZmZmFkAAAAAAAAAWQAAAAAAAABZAAAAAAAAAFkAAAAAAAAAWQAAAAAAAABZAmpmZmZmZFUCamZmZmZkVQJqZmZmZmRVAmpmZmZmZFUCamZmZmZkVQDMzMzMzMxVAMzMzMzMzFUAzMzMzMzMVQDMzMzMzMxVAMzMzMzMzFUAzMzMzMzMVQM3MzMzMzBRAzczMzMzMFEDNzMzMzMwUQM3MzMzMzBRAzczMzMzMFEDNzMzMzMwUQGZmZmZmZhRAZmZmZmZmFEBmZmZmZmYUQAAAAAAAABRAAAAAAAAAFEAAAAAAAAAUQAAAAAAAABRAmpmZmZmZE0CamZmZmZkTQJqZmZmZmRNAMzMzMzMzE0AzMzMzMzMTQDMzMzMzMxNAMzMzMzMzE0AzMzMzMzMTQDMzMzMzMxNAMzMzMzMzE0DNzMzMzMwSQGZmZmZmZhJAZmZmZmZmEkBmZmZmZmYSQGZmZmZmZhJAZmZmZmZmEkBmZmZmZmYSQGZmZmZmZhJAZmZmZmZmEkAAAAAAAAASQAAAAAAAABJAAAAAAAAAEkCamZmZmZkRQJqZmZmZmRFAmpmZmZmZEUCamZmZmZkRQJqZmZmZmRFAmpmZmZmZEUCamZmZmZkRQDMzMzMzMxFAMzMzMzMzEUAzMzMzMzMRQDMzMzMzMxFAMzMzMzMzEUDNzMzMzMwQQM3MzMzMzBBAzczMzMzMEEDNzMzMzMwQQM3MzMzMzBBAzczMzMzMEEDNzMzMzMwQQM3MzMzMzBBAzczMzMzMEEBmZmZmZmYQQGZmZmZmZhBAZmZmZmZmEEBmZmZmZmYQQGZmZmZmZhBAAAAAAAAAEEAAAAAAAAAQQAAAAAAAABBAAAAAAAAAEEAAAAAAAAAQQAAAAAAAABBAMzMzMzMzD0AzMzMzMzMPQDMzMzMzMw9AMzMzMzMzD0AzMzMzMzMPQGZmZmZmZg5AZmZmZmZmDkBmZmZmZmYOQGZmZmZmZg5AZmZmZmZmDkCamZmZmZkNQJqZmZmZmQ1AmpmZmZmZDUDNzMzMzMwMQM3MzMzMzAxAAAAAAAAADEAAAAAAAAAMQAAAAAAAAAxAAAAAAAAADEAzMzMzMzMLQDMzMzMzMwtAZmZmZmZmCkCamZmZmZkJQJqZmZmZmQlAAAAAAAAACEAzMzMzMzMHQGZmZmZmZgZAZmZmZmZmBkCamZmZmZkFQJqZmZmZmQVAmpmZmZmZBUDNzMzMzMwEQAAAAAAAAARAZmZmZmZmAkBmZmZmZmYCQGZmZmZmZgJAmpmZmZmZAUDNzMzMzMwAQAAAAAAAAABAMzMzMzMz+z+amZmZmZn5PwAAAAAAAPg\u002fAAAAAAAA+D8AAAAAAAD4P2ZmZmZmZvY\u002fzczMzMzM9D8AAAAAAADwPwAAAAAAAPA\u002fZmZmZmZm5j8="},"type":"histogram"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"shapes":[{"line":{"color":"green","dash":"dash"},"type":"line","x0":5.528268551236749,"x1":5.528268551236749,"xref":"x","y0":0,"y1":1,"yref":"y domain"},{"line":{"color":"orange","dash":"dot"},"type":"line","x0":5.7,"x1":5.7,"xref":"x","y0":0,"y1":1,"yref":"y domain"},{"line":{"color":"red","dash":"dash"},"type":"line","x0":4.8,"x1":4.8,"xref":"x","y0":0,"y1":1,"yref":"y domain"}],"title":{"text":"Distribuicao das notas"},"xaxis":{"title":{"text":"Nota"}},"yaxis":{"title":{"text":"Quantidade"}}},                        {"responsive": true}                    )                };            </script>        </div>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.4.0.min.js" integrity="sha256-KEmPoupLpFyGMyGAiOsiNDbKDKAvxXAn/W+oQa0ZAfk=" crossorigin="anonymous"></script>                <div id="ca5ae78f-9436-4772-a08d-44e3c1ce97c8" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("ca5ae78f-9436-4772-a08d-44e3c1ce97c8")) {                    Plotly.newPlot(                        "ca5ae78f-9436-4772-a08d-44e3c1ce97c8",                        [{"marker":{"color":"#3B82F6"},"name":"Notas","nbinsx":10,"opacity":0.75,"x":{"dtype":"f8","bdata":"AAAAAAAAIEAAAAAAAAAgQAAAAAAAACBAAAAAAAAAIEAAAAAAAAAgQAAAAAAAACBAAAAAAAAAIEAAAAAAAAAgQAAAAAAAACBAAAAAAAAAIEAAAAAAAAAgQAAAAAAAACBAAAAAAAAAIEAAAAAAAAAgQAAAAAAAACBAAAAAAAAAIEAAAAAAAAAgQAAAAAAAACBAAAAAAAAAIEAAAAAAAAAgQAAAAAAAACBAAAAAAAAAIEAAAAAAAAAgQAAAAAAAACBAAAAAAAAAIEAAAAAAAAAgQAAAAAAAACBAAAAAAAAAIEAAAAAAAAAgQAAAAAAAACBAAAAAAAAAIEAAAAAAAAAgQAAAAAAAACBAAAAAAAAAIEAAAAAAAAAgQAAAAAAAACBAzczMzMzMHkDNzMzMzMweQM3MzMzMzB5AZmZmZmZmHkBmZmZmZmYeQAAAAAAAAB5AAAAAAAAAHkAAAAAAAAAeQAAAAAAAAB5AAAAAAAAAHkAAAAAAAAAeQAAAAAAAAB5AAAAAAAAAHkCamZmZmZkdQJqZmZmZmR1AmpmZmZmZHUCamZmZmZkdQJqZmZmZmR1AMzMzMzMzHUAzMzMzMzMdQDMzMzMzMx1AMzMzMzMzHUAzMzMzMzMdQDMzMzMzMx1AMzMzMzMzHUDNzMzMzMwcQM3MzMzMzBxAzczMzMzMHEBmZmZmZmYcQGZmZmZmZhxAZmZmZmZmHEBmZmZmZmYcQGZmZmZmZhxAZmZmZmZmHEBmZmZmZmYcQGZmZmZmZhxAAAAAAAAAHEAAAAAAAAAcQAAAAAAAABxAAAAAAAAAHECamZmZmZkbQJqZmZmZmRtAmpmZmZmZG0AzMzMzMzMbQDMzMzMzMxtAMzMzMzMzG0AzMzMzMzMbQDMzMzMzMxtAMzMzMzMzG0DNzMzMzMwaQM3MzMzMzBpAzczMzMzMGkDNzMzMzMwaQM3MzMzMzBpAzczMzMzMGkDNzMzMzMwaQM3MzMzMzBpAzczMzMzMGkDNzMzMzMwaQM3MzMzMzBpAzczMzMzMGkBmZmZmZmYaQGZmZmZmZhpAZmZmZmZmGkBmZmZmZmYaQGZmZmZmZhpAZmZmZmZmGkBmZmZmZmYaQGZmZmZmZhpAmpmZmZmZGUCamZmZmZkZQJqZmZmZmRlAmpmZmZmZGUAzMzMzMzMZQDMzMzMzMxlAzczMzMzMGEDNzMzMzMwYQM3MzMzMzBhAzczMzMzMGEDNzMzMzMwYQM3MzMzMzBhAzczMzMzMGEDNzMzMzMwYQGZmZmZmZhhAZmZmZmZmGEBmZmZmZmYYQGZmZmZmZhhAZmZmZmZmGEAAAAAAAAAYQAAAAAAAABhAAAAAAAAAGEAAAAAAAAAYQAAAAAAAABhAAAAAAAAAGEAAAAAAAAAYQAAAAAAAABhAmpmZmZmZF0CamZmZmZkXQJqZmZmZmRdAmpmZmZmZF0CamZmZmZkXQJqZmZmZmRdAMzMzMzMzF0AzMzMzMzMXQDMzMzMzMxdAzczMzMzMFkDNzMzMzMwWQM3MzMzMzBZAzczMzMzMFkDNzMzMzMwWQM3MzMzMzBZAzczMzMzMFkDNzMzMzMwWQGZmZmZmZhZAZmZmZmZmFkBmZmZmZmYWQGZmZmZmZhZAZmZmZmZmFkAAAAAAAAAWQAAAAAAAABZAAAAAAAAAFkAAAAAAAAAWQAAAAAAAABZAmpmZmZmZFUCamZmZmZkVQJqZmZmZmRVAmpmZmZmZFUCamZmZmZkVQDMzMzMzMxVAMzMzMzMzFUAzMzMzMzMVQDMzMzMzMxVAMzMzMzMzFUAzMzMzMzMVQM3MzMzMzBRAzczMzMzMFEDNzMzMzMwUQM3MzMzMzBRAzczMzMzMFEDNzMzMzMwUQGZmZmZmZhRAZmZmZmZmFEBmZmZmZmYUQAAAAAAAABRAAAAAAAAAFEAAAAAAAAAUQAAAAAAAABRAmpmZmZmZE0CamZmZmZkTQJqZmZmZmRNAMzMzMzMzE0AzMzMzMzMTQDMzMzMzMxNAMzMzMzMzE0AzMzMzMzMTQDMzMzMzMxNAMzMzMzMzE0DNzMzMzMwSQGZmZmZmZhJAZmZmZmZmEkBmZmZmZmYSQGZmZmZmZhJAZmZmZmZmEkBmZmZmZmYSQGZmZmZmZhJAZmZmZmZmEkAAAAAAAAASQAAAAAAAABJAAAAAAAAAEkCamZmZmZkRQJqZmZmZmRFAmpmZmZmZEUCamZmZmZkRQJqZmZmZmRFAmpmZmZmZEUCamZmZmZkRQDMzMzMzMxFAMzMzMzMzEUAzMzMzMzMRQDMzMzMzMxFAMzMzMzMzEUDNzMzMzMwQQM3MzMzMzBBAzczMzMzMEEDNzMzMzMwQQM3MzMzMzBBAzczMzMzMEEDNzMzMzMwQQM3MzMzMzBBAzczMzMzMEEBmZmZmZmYQQGZmZmZmZhBAZmZmZmZmEEBmZmZmZmYQQGZmZmZmZhBAAAAAAAAAEEAAAAAAAAAQQAAAAAAAABBAAAAAAAAAEEAAAAAAAAAQQDMzMzMzMw9AMzMzMzMzD0AzMzMzMzMPQDMzMzMzMw9AMzMzMzMzD0BmZmZmZmYOQGZmZmZmZg5AZmZmZmZmDkBmZmZmZmYOQJqZmZmZmQ1AmpmZmZmZDUCamZmZmZkNQM3MzMzMzAxAzczMzMzMDEAAAAAAAAAMQAAAAAAAAAxAAAAAAAAADEAAAAAAAAAMQDMzMzMzMwtAMzMzMzMzC0BmZmZmZmYKQJqZmZmZmQlAmpmZmZmZCUAAAAAAAAAIQDMzMzMzMwdAZmZmZmZmBkBmZmZmZmYGQJqZmZmZmQVAmpmZmZmZBUCamZmZmZkFQM3MzMzMzARAAAAAAAAABEBmZmZmZmYCQGZmZmZmZgJAZmZmZmZmAkCamZmZmZkBQM3MzMzMzABAAAAAAAAAAEAzMzMzMzP7P5qZmZmZmfk\u002fAAAAAAAA+D8AAAAAAAD4PwAAAAAAAPg\u002fZmZmZmZm9j\u002fNzMzMzMz0PwAAAAAAAPA\u002fAAAAAAAA8D9mZmZmZmbmPw=="},"type":"histogram"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"shapes":[{"line":{"color":"green","dash":"dash"},"type":"line","x0":5.596830985915493,"x1":5.596830985915493,"xref":"x","y0":0,"y1":1,"yref":"y domain"},{"line":{"color":"orange","dash":"dot"},"type":"line","x0":5.7,"x1":5.7,"xref":"x","y0":0,"y1":1,"yref":"y domain"},{"line":{"color":"red","dash":"dash"},"type":"line","x0":4.8,"x1":4.8,"xref":"x","y0":0,"y1":1,"yref":"y domain"}],"title":{"text":"Distribuicao das notas"},"xaxis":{"title":{"text":"Nota"}},"yaxis":{"title":{"text":"Quantidade"}}},                        {"responsive": true}                    )                };            </script>        </div>
   </div>
   <div class="card">
-    <h2>Grafico 2: Boxplot por turma</h2>
-    <div>                            <div id="63d0caa0-5e80-47d3-8880-78a24315a375" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("63d0caa0-5e80-47d3-8880-78a24315a375")) {                    Plotly.newPlot(                        "63d0caa0-5e80-47d3-8880-78a24315a375",                        [{"boxmean":true,"name":"9A","y":{"dtype":"f8","bdata":"AAAAAAAAIEAAAAAAAAAgQAAAAAAAACBAmpmZmZmZH0AAAAAAAAAeQGZmZmZmZhxAmpmZmZmZG0DNzMzMzMwaQGZmZmZmZhpAzczMzMzMGEAAAAAAAAAYQJqZmZmZmRdAMzMzMzMzF0DNzMzMzMwWQM3MzMzMzBZAZmZmZmZmFkAzMzMzMzMTQJqZmZmZmRFAZmZmZmZmEEAAAAAAAAAQQDMzMzMzMw9AMzMzMzMzD0DNzMzMzMwMQJqZmZmZmQlAZmZmZmZmBkCamZmZmZkFQM3MzMzMzARAMzMzMzMz+z8AAAAAAAD4P2ZmZmZmZvY\u002fzczMzMzM9D8="},"type":"box"},{"boxmean":true,"name":"9B","y":{"dtype":"f8","bdata":"ZmZmZmZmHkAAAAAAAAAeQJqZmZmZmR1AmpmZmZmZHUAzMzMzMzMdQM3MzMzMzBxAZmZmZmZmHEBmZmZmZmYcQAAAAAAAABxAMzMzMzMzG0DNzMzMzMwaQM3MzMzMzBpAZmZmZmZmGkCamZmZmZkZQM3MzMzMzBhAzczMzMzMGEAAAAAAAAAYQM3MzMzMzBZAZmZmZmZmFkAAAAAAAAAWQJqZmZmZmRVAMzMzMzMzFUBmZmZmZmYUQGZmZmZmZhRAZmZmZmZmFEAzMzMzMzMTQAAAAAAAABJAAAAAAAAAEkAzMzMzMzMRQAAAAAAAABBAZmZmZmZmAkBmZmZmZmYCQAAAAAAAAPg\u002f"},"type":"box"},{"boxmean":true,"name":"9C","y":{"dtype":"f8","bdata":"AAAAAAAAIEAAAAAAAAAgQAAAAAAAACBAAAAAAAAAIECamZmZmZkfQJqZmZmZmR9AzczMzMzMHkAAAAAAAAAeQDMzMzMzMx1AZmZmZmZmHEBmZmZmZmYcQAAAAAAAABxAzczMzMzMGkDNzMzMzMwaQM3MzMzMzBhAzczMzMzMGEDNzMzMzMwYQAAAAAAAABhAmpmZmZmZF0DNzMzMzMwWQGZmZmZmZhZAAAAAAAAAFkAzMzMzMzMTQAAAAAAAABJAmpmZmZmZEUCamZmZmZkRQDMzMzMzMxFAzczMzMzMEEDNzMzMzMwQQM3MzMzMzBBAZmZmZmZmEEBmZmZmZmYOQGZmZmZmZg5AMzMzMzMzC0AAAAAAAAAIQAAAAAAAAABAAAAAAAAA8D8="},"type":"box"},{"boxmean":true,"name":"9D","y":{"dtype":"f8","bdata":"AAAAAAAAIEAAAAAAAAAgQAAAAAAAACBAAAAAAAAAIEAAAAAAAAAgQJqZmZmZmR9AMzMzMzMzH0DNzMzMzMweQGZmZmZmZh5AAAAAAAAAHkCamZmZmZkdQJqZmZmZmR1AMzMzMzMzHUBmZmZmZmYcQGZmZmZmZhxAmpmZmZmZG0AzMzMzMzMbQM3MzMzMzBpAzczMzMzMGkBmZmZmZmYaQJqZmZmZmRlAmpmZmZmZGUAzMzMzMzMZQAAAAAAAABhAmpmZmZmZF0CamZmZmZkXQM3MzMzMzBZAzczMzMzMFkAzMzMzMzMVQM3MzMzMzBRAAAAAAAAAFEAzMzMzMzMTQGZmZmZmZhJAZmZmZmZmEEAAAAAAAAAQQJqZmZmZmQlAAAAAAAAABEA="},"type":"box"},{"boxmean":true,"name":"9E","y":{"dtype":"f8","bdata":"AAAAAAAAHkAzMzMzMzMdQM3MzMzMzBxAzczMzMzMHEDNzMzMzMwcQM3MzMzMzBxAAAAAAAAAHEAAAAAAAAAcQAAAAAAAABxAmpmZmZmZG0AzMzMzMzMbQDMzMzMzMxtAzczMzMzMGkBmZmZmZmYaQJqZmZmZmRlAZmZmZmZmGECamZmZmZkXQDMzMzMzMxdAMzMzMzMzF0DNzMzMzMwWQJqZmZmZmRVAMzMzMzMzFUAzMzMzMzMVQAAAAAAAABRAMzMzMzMzE0AzMzMzMzMTQGZmZmZmZhJAZmZmZmZmEkAzMzMzMzMRQM3MzMzMzBBAZmZmZmZmDkCamZmZmZkNQAAAAAAAAAxAAAAAAAAADEBmZmZmZmYCQJqZmZmZmQFA"},"type":"box"},{"boxmean":true,"name":"9F","y":{"dtype":"f8","bdata":"AAAAAAAAIEAAAAAAAAAgQAAAAAAAACBAAAAAAAAAHkAzMzMzMzMdQDMzMzMzMx1AzczMzMzMHEAAAAAAAAAcQM3MzMzMzBpAzczMzMzMGkBmZmZmZmYaQGZmZmZmZhhAAAAAAAAAGEAAAAAAAAAYQAAAAAAAABhAzczMzMzMFkBmZmZmZmYWQGZmZmZmZhZAAAAAAAAAFkAAAAAAAAAWQJqZmZmZmRVAmpmZmZmZFUCamZmZmZkTQDMzMzMzMxNAZmZmZmZmEkBmZmZmZmYSQDMzMzMzMxFAzczMzMzMEEDNzMzMzMwQQM3MzMzMzBBAzczMzMzMEEBmZmZmZmYQQDMzMzMzMw9AZmZmZmZmDkAAAAAAAAAMQDMzMzMzMwdA"},"type":"box"},{"boxmean":true,"name":"9G","y":{"dtype":"f8","bdata":"AAAAAAAAIEAAAAAAAAAgQAAAAAAAACBAAAAAAAAAHkAzMzMzMzMdQAAAAAAAABxAZmZmZmZmGkBmZmZmZmYaQDMzMzMzMxlAZmZmZmZmGEBmZmZmZmYYQGZmZmZmZhZAmpmZmZmZFUAzMzMzMzMVQM3MzMzMzBRAzczMzMzMFEAAAAAAAAAUQAAAAAAAABRAmpmZmZmZE0DNzMzMzMwSQGZmZmZmZhJAZmZmZmZmEkBmZmZmZmYQQAAAAAAAABBAAAAAAAAAEEAzMzMzMzMPQJqZmZmZmQ1AmpmZmZmZDUDNzMzMzMwMQGZmZmZmZgZAmpmZmZmZBUDNzMzMzMwAQJqZmZmZmfk\u002fAAAAAAAA+D8AAAAAAADwP2ZmZmZmZuY\u002f"},"type":"box"},{"boxmean":true,"name":"9H","y":{"dtype":"f8","bdata":"AAAAAAAAIEAAAAAAAAAgQM3MzMzMzB5AAAAAAAAAHkCamZmZmZkdQGZmZmZmZhxAZmZmZmZmHEBmZmZmZmYcQDMzMzMzMxtAMzMzMzMzG0DNzMzMzMwaQM3MzMzMzBpAzczMzMzMGEDNzMzMzMwYQGZmZmZmZhhAAAAAAAAAGECamZmZmZkXQAAAAAAAABZAMzMzMzMzFUDNzMzMzMwUQM3MzMzMzBRAzczMzMzMFECamZmZmZkTQGZmZmZmZhJAmpmZmZmZEUCamZmZmZkRQJqZmZmZmRFAmpmZmZmZEUAzMzMzMzMRQM3MzMzMzBBAAAAAAAAAEEAzMzMzMzMPQGZmZmZmZg5AAAAAAAAADEAzMzMzMzMLQGZmZmZmZgpAmpmZmZmZBUA="},"type":"box"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"title":{"text":"Comparacao por turma"},"yaxis":{"title":{"text":"Nota"}}},                        {"responsive": true}                    )                };            </script>        </div>
+    </details><details><summary><h2>Grafico 2: Boxplot por turma</h2></summary>
+    <div>                            <div id="f8a5ca16-3786-46a7-8d07-9da6a42a58fa" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("f8a5ca16-3786-46a7-8d07-9da6a42a58fa")) {                    Plotly.newPlot(                        "f8a5ca16-3786-46a7-8d07-9da6a42a58fa",                        [{"boxmean":true,"name":"9A","y":{"dtype":"f8","bdata":"AAAAAAAAIEAAAAAAAAAgQAAAAAAAACBAAAAAAAAAIEAAAAAAAAAgQAAAAAAAAB5AZmZmZmZmHECamZmZmZkbQM3MzMzMzBpAZmZmZmZmGkBmZmZmZmYaQM3MzMzMzBhAAAAAAAAAGECamZmZmZkXQDMzMzMzMxdAzczMzMzMFkDNzMzMzMwWQDMzMzMzMxNAmpmZmZmZEUBmZmZmZmYQQDMzMzMzMw9AMzMzMzMzD0DNzMzMzMwMQJqZmZmZmQlAZmZmZmZmBkCamZmZmZkFQM3MzMzMzARAMzMzMzMz+z8AAAAAAAD4P2ZmZmZmZvY\u002fzczMzMzM9D8="},"type":"box"},{"boxmean":true,"name":"9B","y":{"dtype":"f8","bdata":"AAAAAAAAIEAAAAAAAAAgQAAAAAAAACBAZmZmZmZmHkAAAAAAAAAeQJqZmZmZmR1AmpmZmZmZHUAzMzMzMzMdQGZmZmZmZhxAZmZmZmZmHEAzMzMzMzMbQM3MzMzMzBpAzczMzMzMGkBmZmZmZmYaQJqZmZmZmRlAzczMzMzMGEDNzMzMzMwYQAAAAAAAABhAzczMzMzMFkBmZmZmZmYWQAAAAAAAABZAmpmZmZmZFUAzMzMzMzMVQGZmZmZmZhRAZmZmZmZmFEBmZmZmZmYUQDMzMzMzMxNAAAAAAAAAEkAAAAAAAAASQDMzMzMzMxFAAAAAAAAAEEBmZmZmZmYCQGZmZmZmZgJAAAAAAAAA+D8="},"type":"box"},{"boxmean":true,"name":"9C","y":{"dtype":"f8","bdata":"AAAAAAAAIEAAAAAAAAAgQAAAAAAAACBAAAAAAAAAIEAAAAAAAAAgQAAAAAAAACBAAAAAAAAAIEDNzMzMzMweQGZmZmZmZh5AAAAAAAAAHkAzMzMzMzMdQGZmZmZmZhxAAAAAAAAAHEDNzMzMzMwaQM3MzMzMzBpAzczMzMzMGEDNzMzMzMwYQM3MzMzMzBhAAAAAAAAAGECamZmZmZkXQM3MzMzMzBZAZmZmZmZmFkAAAAAAAAAWQDMzMzMzMxNAAAAAAAAAEkCamZmZmZkRQJqZmZmZmRFAMzMzMzMzEUDNzMzMzMwQQM3MzMzMzBBAzczMzMzMEEBmZmZmZmYQQGZmZmZmZg5AMzMzMzMzC0AAAAAAAAAIQAAAAAAAAABAAAAAAAAA8D8="},"type":"box"},{"boxmean":true,"name":"9D","y":{"dtype":"f8","bdata":"AAAAAAAAIEAAAAAAAAAgQAAAAAAAACBAAAAAAAAAIEAAAAAAAAAgQAAAAAAAACBAAAAAAAAAIEAAAAAAAAAgQAAAAAAAACBAzczMzMzMHkAAAAAAAAAeQJqZmZmZmR1AmpmZmZmZHUAzMzMzMzMdQGZmZmZmZhxAmpmZmZmZG0AzMzMzMzMbQM3MzMzMzBpAzczMzMzMGkBmZmZmZmYaQJqZmZmZmRlAmpmZmZmZGUAzMzMzMzMZQAAAAAAAABhAmpmZmZmZF0CamZmZmZkXQM3MzMzMzBZAzczMzMzMFkAzMzMzMzMVQM3MzMzMzBRAAAAAAAAAFEAzMzMzMzMTQGZmZmZmZhJAZmZmZmZmEEAAAAAAAAAQQJqZmZmZmQlAAAAAAAAABEA="},"type":"box"},{"boxmean":true,"name":"9E","y":{"dtype":"f8","bdata":"AAAAAAAAIEAAAAAAAAAgQAAAAAAAACBAAAAAAAAAIEAAAAAAAAAeQDMzMzMzMx1AzczMzMzMHEDNzMzMzMwcQAAAAAAAABxAmpmZmZmZG0AzMzMzMzMbQDMzMzMzMxtAzczMzMzMGkBmZmZmZmYaQJqZmZmZmRlAZmZmZmZmGECamZmZmZkXQDMzMzMzMxdAMzMzMzMzF0DNzMzMzMwWQJqZmZmZmRVAMzMzMzMzFUAzMzMzMzMVQAAAAAAAABRAMzMzMzMzE0AzMzMzMzMTQGZmZmZmZhJAZmZmZmZmEkAzMzMzMzMRQM3MzMzMzBBAZmZmZmZmDkCamZmZmZkNQAAAAAAAAAxAAAAAAAAADEBmZmZmZmYCQJqZmZmZmQFA"},"type":"box"},{"boxmean":true,"name":"9F","y":{"dtype":"f8","bdata":"AAAAAAAAIEAAAAAAAAAgQAAAAAAAACBAAAAAAAAAHkAzMzMzMzMdQDMzMzMzMx1AzczMzMzMHEAAAAAAAAAcQM3MzMzMzBpAzczMzMzMGkBmZmZmZmYaQGZmZmZmZhhAAAAAAAAAGEAAAAAAAAAYQAAAAAAAABhAzczMzMzMFkBmZmZmZmYWQGZmZmZmZhZAAAAAAAAAFkAAAAAAAAAWQJqZmZmZmRVAmpmZmZmZFUCamZmZmZkTQDMzMzMzMxNAZmZmZmZmEkBmZmZmZmYSQDMzMzMzMxFAzczMzMzMEEDNzMzMzMwQQM3MzMzMzBBAzczMzMzMEEBmZmZmZmYQQDMzMzMzMw9AZmZmZmZmDkAAAAAAAAAMQDMzMzMzMwdA"},"type":"box"},{"boxmean":true,"name":"9G","y":{"dtype":"f8","bdata":"AAAAAAAAIEAAAAAAAAAgQAAAAAAAACBAAAAAAAAAHkAzMzMzMzMdQAAAAAAAABxAZmZmZmZmGkBmZmZmZmYaQDMzMzMzMxlAZmZmZmZmGEBmZmZmZmYYQGZmZmZmZhZAmpmZmZmZFUAzMzMzMzMVQM3MzMzMzBRAzczMzMzMFEAAAAAAAAAUQAAAAAAAABRAmpmZmZmZE0DNzMzMzMwSQGZmZmZmZhJAZmZmZmZmEkBmZmZmZmYQQAAAAAAAABBAAAAAAAAAEEAzMzMzMzMPQJqZmZmZmQ1AmpmZmZmZDUDNzMzMzMwMQGZmZmZmZgZAmpmZmZmZBUDNzMzMzMwAQJqZmZmZmfk\u002fAAAAAAAA+D8AAAAAAADwP2ZmZmZmZuY\u002f"},"type":"box"},{"boxmean":true,"name":"9H","y":{"dtype":"f8","bdata":"AAAAAAAAIEAAAAAAAAAgQM3MzMzMzB5AAAAAAAAAHkCamZmZmZkdQGZmZmZmZhxAZmZmZmZmHEBmZmZmZmYcQDMzMzMzMxtAMzMzMzMzG0DNzMzMzMwaQM3MzMzMzBpAzczMzMzMGEDNzMzMzMwYQGZmZmZmZhhAAAAAAAAAGECamZmZmZkXQAAAAAAAABZAMzMzMzMzFUDNzMzMzMwUQM3MzMzMzBRAzczMzMzMFECamZmZmZkTQGZmZmZmZhJAmpmZmZmZEUCamZmZmZkRQJqZmZmZmRFAmpmZmZmZEUAzMzMzMzMRQM3MzMzMzBBAAAAAAAAAEEAzMzMzMzMPQGZmZmZmZg5AAAAAAAAADEAzMzMzMzMLQGZmZmZmZgpAmpmZmZmZBUA="},"type":"box"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"title":{"text":"Comparacao por turma"},"yaxis":{"title":{"text":"Nota"}}},                        {"responsive": true}                    )                };            </script>        </div>
   </div>
   <div class="card">
-    <h2>Grafico 3: Media por turma</h2>
-    <div>                            <div id="f48f4e32-5926-4c64-8636-a9a18eeab3f8" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("f48f4e32-5926-4c64-8636-a9a18eeab3f8")) {                    Plotly.newPlot(                        "f48f4e32-5926-4c64-8636-a9a18eeab3f8",                        [{"marker":{"color":"#10B981"},"text":["4.95","5.70","5.63","6.36","5.59","5.59","4.79","5.51"],"textposition":"outside","x":["9A","9B","9C","9D","9E","9F","9G","9H"],"y":{"dtype":"f8","bdata":"zczMzMzME0DNzMzMzMwWQIXrUbgehRZAcT0K16NwGUBcj8L1KFwWQFyPwvUoXBZAKVyPwvUoE0AK16NwPQoWQA=="},"type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"title":{"text":"Media de notas por turma"},"xaxis":{"title":{"text":"Turma"}},"yaxis":{"title":{"text":"Media"}}},                        {"responsive": true}                    )                };            </script>        </div>
+    </details><details><summary><h2>Grafico 3: Media por turma</h2></summary>
+    <div>                            <div id="bdeb0ad5-a73e-4f33-b460-47a153b48293" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("bdeb0ad5-a73e-4f33-b460-47a153b48293")) {                    Plotly.newPlot(                        "bdeb0ad5-a73e-4f33-b460-47a153b48293",                        [{"marker":{"color":"#10B981"},"text":["5.12","5.82","5.76","6.41","5.69","5.59","4.79","5.51"],"textposition":"outside","x":["9A","9B","9C","9D","9E","9F","9G","9H"],"y":{"dtype":"f8","bdata":"exSuR+F6FEBI4XoUrkcXQArXo3A9ChdApHA9CtejGUDD9Shcj8IWQFyPwvUoXBZAKVyPwvUoE0AK16NwPQoWQA=="},"type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"title":{"text":"Media de notas por turma"},"xaxis":{"title":{"text":"Turma"}},"yaxis":{"title":{"text":"Media"}}},                        {"responsive": true}                    )                };            </script>        </div>
+  </div>
+</details>
+    <div class="footer">
+      Última atualização: 22/04/2026 às 10:45
+    </div>
   </div>
 </body>
 </html>
