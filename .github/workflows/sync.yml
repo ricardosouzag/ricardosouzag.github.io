@@ -32,13 +32,45 @@ jobs:
 
           relatorios = Path("relatorios")
 
+          def make_collapsible(html: str) -> str:
+              """
+              Wrap sections starting with <h1>, <h2>, <h3> into <details>.
+              First section open, others closed.
+              """
+              import re
+
+              sections = re.split(r'(<h[1-3][^>]*>.*?</h[1-3]>)', html, flags=re.DOTALL)
+
+              result = []
+              open_first = True
+
+              i = 0
+              while i < len(sections):
+                  if sections[i].startswith("<h"):
+                      title = sections[i]
+                      content = sections[i + 1] if i + 1 < len(sections) else ""
+
+                      if open_first:
+                          result.append(f"<details open><summary>{title}</summary>{content}</details>")
+                          open_first = False
+                      else:
+                          result.append(f"<details><summary>{title}</summary>{content}</details>")
+
+                      i += 2
+                  else:
+                      result.append(sections[i])
+                      i += 1
+
+              return "".join(result)
+
+
           TEMPLATE = """
           <!DOCTYPE html>
           <html lang="pt-BR">
           <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Relatórios - {school}</title>
+            <title>{title}</title>
             <style>
               body {{
                 font-family: system-ui, sans-serif;
@@ -48,7 +80,7 @@ jobs:
               }}
 
               .container {{
-                max-width: 900px;
+                max-width: 1100px;
                 margin: auto;
                 background: white;
                 padding: 2rem;
@@ -56,27 +88,42 @@ jobs:
                 box-shadow: 0 8px 24px rgba(0,0,0,0.08);
               }}
 
-              ul {{
-                list-style: none;
-                padding: 0;
-              }}
-
-              li {{
-                margin-bottom: 0.75rem;
-              }}
-
-              a {{
-                display: block;
-                padding: 1rem;
-                text-decoration: none;
-                background: #f8fafc;
-                border-radius: 10px;
+              details {{
+                margin-bottom: 1rem;
                 border: 1px solid #e2e8f0;
-                color: #0f172a;
+                border-radius: 12px;
+                overflow: hidden;
               }}
 
-              a:hover {{
+              summary {{
+                cursor: pointer;
+                padding: 1rem;
+                font-size: 1.2rem;
+                background: #f1f5f9;
+                border-bottom: 1px solid #e2e8f0;
+              }}
+
+              details[open] summary {{
                 background: #e2e8f0;
+              }}
+
+              details > *:not(summary) {{
+                padding: 1rem;
+              }}
+
+              table {{
+                width: 100%;
+                border-collapse: collapse;
+              }}
+
+              th, td {{
+                border: 1px solid #e5e7eb;
+                padding: 0.5rem;
+                text-align: left;
+              }}
+
+              th {{
+                background: #f8fafc;
               }}
 
               .footer {{
@@ -88,10 +135,7 @@ jobs:
           </head>
           <body>
             <div class="container">
-              <h1>Relatórios — {school}</h1>
-              <ul>
-                {links}
-              </ul>
+              {content}
               <div class="footer">
                 Última atualização: {timestamp}
               </div>
@@ -106,29 +150,32 @@ jobs:
               if not school_dir.is_dir():
                   continue
 
-              school_display = school_dir.name.replace("-", " ").replace("_", " ")
-
-              links = []
-              for html_file in sorted(school_dir.glob("*.html")):
+              for html_file in school_dir.glob("*.html"):
                   if html_file.name == "index.html":
                       continue
 
-                  display_name = html_file.stem.replace("_", " ")
-                  links.append(
-                      f'<li><a href="{html_file.name}">{display_name}</a></li>'
+                  original = html_file.read_text(encoding="utf-8")
+
+                  # Extract body content only (if full HTML exists)
+                  import re
+                  body_match = re.search(r"<body.*?>(.*?)</body>", original, re.DOTALL)
+                  content = body_match.group(1) if body_match else original
+
+                  content = make_collapsible(content)
+
+                  new_html = TEMPLATE.format(
+                      title=html_file.stem,
+                      content=content,
+                      timestamp=timestamp
                   )
 
-              index_html = TEMPLATE.format(
-                  school=school_display,
-                  links="\n      ".join(links),
-                  timestamp=timestamp,
-              )
+                  html_file.write_text(new_html, encoding="utf-8")
 
-              (school_dir / "index.html").write_text(index_html, encoding="utf-8")
-
+          # remove root index if exists
           root_index = relatorios / "index.html"
           if root_index.exists():
               root_index.unlink()
+
           PYTHON
 
       - name: Commit and push if changed
