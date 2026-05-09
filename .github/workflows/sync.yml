@@ -24,20 +24,21 @@ jobs:
           rsync -av --delete "temp_source/2026/relatorios-simples/" "relatorios/"
           rm -rf temp_source
 
-      - name: Generate per-school indexes
+      - name: Generate indexes
         run: |
           python <<'PYTHON'
           from pathlib import Path
 
           relatorios = Path("relatorios")
 
-          TEMPLATE = """
+          PAGE_TEMPLATE = """
           <!DOCTYPE html>
           <html lang="pt-BR">
           <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Relatórios - {school}</title>
+            <title>{title}</title>
+
             <style>
               body {{
                 font-family: system-ui, sans-serif;
@@ -81,44 +82,118 @@ jobs:
               a:hover {{
                 background: #e2e8f0;
               }}
+
+              .back {{
+                margin-bottom: 1.5rem;
+              }}
             </style>
           </head>
+
           <body>
             <div class="container">
-              <h1>Relatórios — {school}</h1>
-              <ul>
-                {links}
-              </ul>
+              {content}
             </div>
           </body>
           </html>
           """
 
+
+          def prettify(name: str) -> str:
+              return name.replace("-", " ").replace("_", " ")
+
+
+          # =========================
+          # Generate etapa indexes
+          # =========================
+
           for school_dir in relatorios.iterdir():
               if not school_dir.is_dir():
                   continue
 
-              school_display = school_dir.name.replace("-", " ").replace("_", " ")
-
-              links = []
-              for html_file in sorted(school_dir.glob("*.html")):
-                  if html_file.name == "index.html":
+              for etapa_dir in school_dir.iterdir():
+                  if not etapa_dir.is_dir():
                       continue
 
-                  display_name = html_file.stem.replace("_", " ")
-                  links.append(
-                      f'<li><a href="{html_file.name}">{display_name}</a></li>'
+                  links = []
+
+                  for html_file in sorted(etapa_dir.glob("*.html")):
+                      if html_file.name == "index.html":
+                          continue
+
+                      display_name = prettify(html_file.stem)
+
+                      links.append(
+                          f'<li><a href="{html_file.name}">{display_name}</a></li>'
+                      )
+
+                  content = f"""
+                  <div class="back">
+                    <a href="../">← Voltar para {prettify(school_dir.name)}</a>
+                  </div>
+
+                  <h1>{prettify(school_dir.name)} — {prettify(etapa_dir.name)}</h1>
+
+                  <ul>
+                    {"".join(links)}
+                  </ul>
+                  """
+
+                  index_html = PAGE_TEMPLATE.format(
+                      title=f"{school_dir.name} - {etapa_dir.name}",
+                      content=content
                   )
 
-              index_html = TEMPLATE.format(
-                  school=school_display,
-                  links="\n".join(links),
+                  (etapa_dir / "index.html").write_text(
+                      index_html,
+                      encoding="utf-8"
+                  )
+
+
+          # =========================
+          # Generate school indexes
+          # =========================
+
+          for school_dir in relatorios.iterdir():
+              if not school_dir.is_dir():
+                  continue
+
+              links = []
+
+              for etapa_dir in sorted(school_dir.iterdir()):
+                  if not etapa_dir.is_dir():
+                      continue
+
+                  display_name = prettify(etapa_dir.name)
+
+                  links.append(
+                      f'<li><a href="{etapa_dir.name}/">{display_name}</a></li>'
+                  )
+
+              content = f"""
+              <h1>{prettify(school_dir.name)}</h1>
+
+              <ul>
+                {"".join(links)}
+              </ul>
+              """
+
+              index_html = PAGE_TEMPLATE.format(
+                  title=school_dir.name,
+                  content=content
               )
 
-              (school_dir / "index.html").write_text(index_html, encoding="utf-8")
+              (school_dir / "index.html").write_text(
+                  index_html,
+                  encoding="utf-8"
+              )
 
-          # remove root index if exists
+
+          # =========================
+          # Remove root index
+          # =========================
+
           root_index = relatorios / "index.html"
+
           if root_index.exists():
               root_index.unlink()
 
